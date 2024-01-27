@@ -6,8 +6,11 @@ from datetime import datetime, timedelta
 from PIL import Image
 
 def default_moeda_brasil():
-
-    locale.setlocale(locale.LC_ALL, 'pt_BR')
+    try:
+        # Configuração específica para formatar números como moeda brasileira
+        locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
+    except locale.Error as e:
+        st.warning(f"Erro ao configurar o locale para moeda brasileira: {e}")
 
 def main_page():
 
