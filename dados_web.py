@@ -277,18 +277,7 @@ def main_page():
 
         st.write(dados_reunidos)
 
-    def venda_hortifruti():
-        path = 'adega_vendas_jan.csv'
-        dados = pd.read_csv(path, encoding='latin1', delimiter=';')
-        dados['Faturamento'] = dados['Faturamento'].str.replace(',', '.').astype(float)
-        dados_reunidos = dados.groupby('Descrição')['Faturamento'].sum().reset_index()
-        st.bar_chart(dados_reunidos, x="Descrição", y="Faturamento", color = "#bd2f3c")
-
-        soma = dados_reunidos['Faturamento'].sum()
-        
-        
-        soma = round(soma, 2)
-        st.write(f"O valor de venda do Hortifruti é {locale.currency(soma, grouping=True)}")
+    
 
     # Título do aplicativo
     with st.container():
@@ -421,10 +410,6 @@ def main_page():
     st.markdown("<h1 style='text-align: center; color: #b42e53;'>Vendas por Seção::</h1>", unsafe_allow_html=True)
 
 
-    with st.container():
-        st.write("---")
-        button_hort = st.button('Venda Hortifruti')
-        if button_hort:
-            venda_hortifruti()
+    
 
 main_page()
