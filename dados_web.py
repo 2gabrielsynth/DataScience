@@ -1,16 +1,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import locale
+
 from datetime import datetime, timedelta
 from PIL import Image
 
-def default_moeda_brasil():
-    try:
-        # Configuração específica para formatar números como moeda brasileira
-        locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
-    except locale.Error as e:
-        st.warning(f"Erro ao configurar o locale para moeda brasileira: {e}")
 
 def main_page():
 
@@ -42,8 +36,7 @@ def main_page():
             soma = dados_reunidos['Valor'].sum()
             print(soma)
             
-            default_moeda_brasil()
-            st.write(locale.currency(soma, grouping=True))
+          
 
             
     
@@ -63,8 +56,7 @@ def main_page():
             soma = dados_reunidos['Valor'].sum()
             print(soma)
             
-            default_moeda_brasil()
-            st.write(locale.currency(soma, grouping=True))
+            
     
     def Vendas_Mercadeli_Caixa():
             qtde_dias = st.selectbox("Maior - Menor", ["97D"])
@@ -81,10 +73,7 @@ def main_page():
             soma = dados_reunidos['Valor Bruto'].sum()
             print(soma)
             
-            default_moeda_brasil()
-            st.write(locale.currency(soma, grouping=True))
-    
-    
+          
     
 
     def valor_fornecedores():
@@ -102,8 +91,6 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
     
     
    
