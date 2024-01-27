@@ -110,9 +110,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
-
+        
     
     
     
@@ -131,8 +129,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     
@@ -151,8 +148,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     
@@ -174,8 +170,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     
@@ -196,8 +191,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     def Compras_Bebidas():
@@ -215,8 +209,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     def Compras_Padaria():
@@ -234,8 +227,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     def Compras_Interno():
@@ -253,8 +245,7 @@ def main_page():
         soma = dados_reunidos['Valor Total'].sum()
         print(soma)
         
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
 
     
     
@@ -294,8 +285,7 @@ def main_page():
         st.bar_chart(dados_reunidos, x="Descrição", y="Faturamento", color = "#bd2f3c")
 
         soma = dados_reunidos['Faturamento'].sum()
-        default_moeda_brasil()
-        st.write(locale.currency(soma, grouping=True))
+        
         
         soma = round(soma, 2)
         st.write(f"O valor de venda do Hortifruti é {locale.currency(soma, grouping=True)}")
