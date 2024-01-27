@@ -11,7 +11,7 @@ def default_moeda_brasil():
 
 def main_page():
 
-    imagem1 = Image.open("Imgs//logo3.png")
+    imagem1 = Image.open("logo3.png")
     largura_desejada = 800
     altura_desejada = 449
     imagem1_redimensionada = imagem1.resize((largura_desejada, altura_desejada))
@@ -27,7 +27,7 @@ def main_page():
     def Perdas_Mercadeli():
             qtde_dias = st.selectbox("Maior - Menor", ["97D"])
             num_dias = int(qtde_dias.replace("D", ""))
-            path = 'datasets//Estoque_Dezembro_23//dezPerdas23.csv'
+            path = 'dezPerdas23.csv'
             dados = pd.read_csv(path, encoding='latin1', delimiter=';')
             dados['Valor'] = dados['Valor'].str.replace(',', '.').astype(float)
             num_linhas = len(dados['Cliente'])
@@ -48,7 +48,7 @@ def main_page():
     def Vendas_Mercadeli_Varejo():
             qtde_dias = st.selectbox("Maior - Menor", ["97D"])
             num_dias = int(qtde_dias.replace("D", ""))
-            path = 'datasets//Estoque_Dezembro_23//dezVendasVar23.csv'
+            path = 'dezVendasVar23.csv'
             dados = pd.read_csv(path, encoding='latin1', delimiter=';')
             dados['Valor'] = dados['Valor'].str.replace(',', '.').astype(float)
             num_linhas = len(dados['Cliente'])
@@ -66,7 +66,7 @@ def main_page():
     def Vendas_Mercadeli_Caixa():
             qtde_dias = st.selectbox("Maior - Menor", ["97D"])
             num_dias = int(qtde_dias.replace("D", ""))
-            path = 'datasets//Estoque_Dezembro_23//dezCupom23.csv'
+            path = 'dezCupom23.csv'
             dados = pd.read_csv(path, encoding='latin1', delimiter=';')
             dados['Valor Bruto'] = dados['Valor Bruto'].str.replace(',', '.').astype(float)
             num_linhas = len(dados['Operador'])
@@ -87,7 +87,7 @@ def main_page():
     def valor_fornecedores():
         qtde_dias = st.selectbox("Maior - Menor", ["97D"])
         num_dias = int(qtde_dias.replace("D", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezTotais23.csv'
+        path = 'dezTotais23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -108,7 +108,7 @@ def main_page():
     def Compras_Açougue():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezAçouge23.csv'
+        path = 'dezAçouge23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -129,7 +129,7 @@ def main_page():
     def Compras_Adega():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezAdega23.csv'
+        path = 'dezAdega23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -149,7 +149,7 @@ def main_page():
     def Compras_Congelados():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezCongelados23.csv'
+        path = 'dezCongelados23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -172,7 +172,7 @@ def main_page():
     def Compras_Frios():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezFrios23.csv'
+        path = 'dezFrios23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -194,7 +194,7 @@ def main_page():
     def Compras_Mercearia():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezMercearia23.csv'
+        path = 'dezMercearia23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -213,7 +213,7 @@ def main_page():
     def Compras_Bebidas():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezBebidas23.csv'
+        path = 'dezBebidas23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -232,7 +232,7 @@ def main_page():
     def Compras_Padaria():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezPadaria23.csv'
+        path = 'dezPadaria23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -251,7 +251,7 @@ def main_page():
     def Compras_Interno():
         qtde_dias = st.selectbox("Maior - Menor", ["15 Fornecedores"])
         num_dias = int(qtde_dias.replace("Fornecedores", ""))
-        path = 'datasets//Estoque_Dezembro_23//dezInterno23.csv'
+        path = 'dezInterno23.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Valor Total'] = dados['Valor Total'].str.replace(',', '.').astype(float)
         num_linhas = len(dados['Nome do Fornecedor'])
@@ -276,7 +276,7 @@ def main_page():
         #print(dados)
 
     def operadoras_sacola():
-        path = 'datasets//sacola.csv'
+        path = 'sacola.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Qtd. Itens'] = dados['Qtd. Itens'].astype(str)
         dados['Qtd. Itens'] = dados['Qtd. Itens'].str.replace(',', '.').astype(float)
@@ -297,7 +297,7 @@ def main_page():
         st.write(dados_reunidos)
 
     def venda_hortifruti():
-        path = 'datasets//adega_vendas_jan.csv'
+        path = 'adega_vendas_jan.csv'
         dados = pd.read_csv(path, encoding='latin1', delimiter=';')
         dados['Faturamento'] = dados['Faturamento'].str.replace(',', '.').astype(float)
         dados_reunidos = dados.groupby('Descrição')['Faturamento'].sum().reset_index()
@@ -327,7 +327,7 @@ def main_page():
 
     with st.container():
          st.write("____________________________")
-         imagem2 = Image.open("Imgs//vrj.png")
+         imagem2 = Image.open("vrj.png")
          largura_desejada = 800
          altura_desejada = 600
          imagem2_redimensionada = imagem2.resize((largura_desejada, altura_desejada))
